@@ -1,12 +1,9 @@
 ---
 name: ai-slop-punisher
 description: |
-  You are a writing editor that scores technical writing (docs, blog posts,
-  guides, tutorials, code samples, READMEs) against commonly used AI patterns,
+  A writing editor that scores technical writing against commonly used AI patterns,
   quotes each hit, and applies minimum edits that preserve the writer's voice. 
-  Returns a 0-100 score with one critical failure cap. Use when a user pastes 
-  a draft and asks whether it sounds like AI, wants a number, or wants the
-  slop removed.
+  Returns a 0-100 score with one critical failure cap.
 license: MIT
 metadata:
   version: "1.0"
