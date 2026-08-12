@@ -61,7 +61,7 @@ A sample overrides the rules in this skill, including the em dash rule. If the w
 
 ## The Rules
 
-Twenty-seven rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Twenty-nine rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -91,15 +91,15 @@ After:
 
 #### A3. Superficial -ing analyses
 
-Words to watch: highlighting, underscoring, emphasizing, ensuring, reflecting, symbolizing, contributing to, cultivating, fostering, encompassing, showcasing.
+Words to watch: highlighting, underscoring, emphasizing, ensuring, reflecting, symbolizing, contributing to, cultivating, fostering, encompassing, showcasing, empowering, unlocking, paving the way, setting up for success.
 
-Why this is wrong: a present-participle phrase tacked on at the end of a sentence to add fake depth. The sentence would be stronger without it.
+Why this is wrong: a present-participle phrase tacked on at the end of a sentence, either to add fake depth about what just happened or to gesture at a vague future benefit instead of stating a concrete result. The sentence would be stronger without it.
 
 Before:
-> The new endpoint returns a 204 status code on success, ensuring clean state management, fostering developer confidence, showcasing the platform's commitment to reliability.
+> The new endpoint returns a 204 status code on success, ensuring clean state management, fostering developer confidence, showcasing the platform's commitment to reliability. The new release ships a rewritten scheduler, empowering teams to deploy faster and unlocking new possibilities for growth.
 
 After:
-> The new endpoint returns a 204 status code on success.
+> The new endpoint returns a 204 status code on success. The new release ships a rewritten scheduler. Deploys that took 8 minutes now take 90 seconds.
 
 #### A4. Vague attributions and knowledge-cutoff hedges
 
@@ -147,6 +147,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > ecosystem (as filler) → system
 > elevate → raise
 > embark → start
+> empower, empowering → enable, help
 > encompass → cover, include
 > endeavour → try, attempt
 > enhance → improve
@@ -178,6 +179,8 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > paradigm → model, framework
 > paradigm shift → major change
 > paramount → top, key
+> pave the way, paving the way → clear the path, enable
+> pipeline (as placeholder for specific tooling) → workflow, process, or name the actual tool
 > pivotal → key, central
 > profound → deep, strong
 > realm → area, field
@@ -199,6 +202,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > this is huge → cut
 > transformative → major, new
 > underscore (verb) → emphasize
+> unlock, unlocking → open up, enable
 > unprecedented → first, new
 > utilize → use
 > valuable (as filler) → useful
@@ -294,6 +298,32 @@ Before:
 
 After:
 > Streaming tokens without classifying them loses the content / thinking / tool-call boundary the model emitted.
+
+#### C8. Topic-comment inversion
+
+Pattern: a copular sentence (is/are/was/were) where a concrete value sits in the subject and the abstract topic sits in the predicate, e.g. "Eight inference steps is the turbo default."
+
+Why this is wrong: the sentence buries what the paragraph is actually about inside the predicate. The subject should be the topic; the value should follow "is."
+
+Before:
+> Eight inference steps is the turbo default.
+
+After:
+> The turbo default is eight inference steps.
+
+Exception: topic-first copulas are already correct and should not be flagged ("ACE-Step is a four-stage bundle").
+
+#### C9. Gerund-phrase openers
+
+Pattern: a sentence that opens with a gerund phrase ("Understanding X...", "By leveraging Y...", "Navigating Z...") standing in as the subject, usually paired with a hollow predicate ("is essential," "is crucial," "requires careful planning," "allows teams to").
+
+Why this is wrong: the subject is a vague activity instead of a concrete actor or fact. The sentence sounds like scene-setting, not a claim about anything specific.
+
+Before:
+> Understanding the nuances of rate limiting is essential for building resilient APIs. By leveraging caching, teams can significantly improve performance.
+
+After:
+> Rate limiting has three tradeoffs: latency, fairness, and burst tolerance. Caching cut p99 latency from 800ms to 90ms.
 
 ### D. Style and Formatting
 
