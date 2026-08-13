@@ -534,7 +534,7 @@ The technical-docs gate fires only when the draft has a fenced code block, three
 
 #### F2. Vague placeholder verbs
 
-Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval.
+Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval.
 
 Why this is wrong: the verb sounds like a stand-in for a specific action. The next reader has to translate the placeholder back into a real verb.
 
