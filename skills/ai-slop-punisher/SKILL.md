@@ -75,7 +75,7 @@ This is the full list. A project-specific fork of this skill (e.g. a lesson-writ
 
 ## The Rules
 
-Twenty-nine rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Thirty rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -347,6 +347,18 @@ Before:
 
 After:
 > Rate limiting has three tradeoffs: latency, fairness, and burst tolerance. Caching cut p99 latency from 800ms to 90ms.
+
+#### C10. Pseudo-cleft causal explanations
+
+Pattern: "[X] is what makes/causes/allows/lets [Y]" instead of a direct verb: "[X] makes/causes/allows [Y]."
+
+Why this is wrong: the "is what" clause is a grammatical detour around a plain causal verb. The sentence spends a copula and a relative pronoun to say what the verb already says on its own.
+
+Before:
+> The conversion is what makes the bytes compatible with Whisper.
+
+After:
+> The conversion makes the bytes compatible with Whisper.
 
 ### D. Style and Formatting
 
