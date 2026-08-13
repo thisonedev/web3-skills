@@ -21,7 +21,7 @@ When given a draft, do this:
 2. **Quote every hit.** For each rule that fires, quote the offending line and give a one-line fix. The score without quotes is not a review.
 3. **Preserve the voice.** When editing, fix what the ruleset flags and leave the rest. Word-swap is not editing. Hold the writer's vocabulary, cadence, and asides. A polished rewrite in a stranger's voice is a worse deliverable than a small edit in the writer's voice.
 4. **Never invent facts.** The rewrite may not contain a fact, name, number, date, quote, or citation that the source draft does not already have. Mark hypotheticals as hypotheticals. Cut rather than decorate.
-5. **Match the audience.** Technical docs, blog posts, READMEs, and reference pages have different defaults. State the requirement definitively in docs (you must, required). End on a concrete takeaway in blog posts. The ruleset stays the same; the calibration changes.
+5. **Match the audience.** Technical docs, blog posts, READMEs, reference pages, and coding-academy lessons have different defaults. State the requirement definitively in docs (you must, required). End on a concrete takeaway in blog posts. Coding-academy lessons follow the closed exception list in Audience Calibration: Coding Academy Lessons. The ruleset stays the same; the calibration changes.
 
 How the user invokes the skill changes what comes back. See Invocation Modes.
 
@@ -58,6 +58,20 @@ If the user provides a writing sample, read it before scoring.
 3. Without a sample, use the default register for the medium (technical docs use plain imperatives; blog posts can have a stance).
 
 A sample overrides the rules in this skill, including the em dash rule. If the writer uses em dashes, keep them at roughly the sample's frequency. Matching the author beats scrubbing the sign.
+
+## Audience Calibration: Coding Academy Lessons
+
+A fifth medium alongside docs, blog posts, READMEs, and reference pages (see "Match the audience" above). Applies to coding-academy lesson content: a lesson body paired with a `starting.ts`/`answer.ts`-style exercise, chapter landing pages, and the connective text between lessons. The ruleset stays the same; this is the full, closed list of named exceptions on top of it. Nothing not listed here is relaxed. A coding-academy lesson still owes the rest of the ruleset in full.
+
+- **Welcome-to opener, once per chapter or lesson (relaxes E1).** "Welcome to [course/chapter/lesson name]!" is allowed as the literal opening line, with exactly one exclamation mark. E1's general rule (once per *portal*, not a recurring opener) still governs everywhere outside that one opening line: "welcome to" mid-lesson is still filler, and exclamation marks still cap at one earned use per piece.
+- **Fact-dump opening line (relaxes E4).** A chapter or lesson may open with "In this first lesson, we're going to..." or "In this lesson, we'll walk through...". Opening line only; the same framing mid-lesson is still signposting.
+- **"Drift" in a real ML sense (relaxes F2).** "Drift" is allowed when it names a real phenomenon tied to a named model or metric ("model drift," "concept drift," "the fine-tuned adapter's outputs drift after N tokens"). Casual use ("things drift over time") is still banned; use "go stale" or "fall out of sync."
+- **Reused structural connectors (relaxes C6).** Short connectors like "we're going to," "we'd need to," "it's time to" may repeat across a lesson or across lessons, since they're structural connectors, not content words. Reusing the exact same full sentence twice within one lesson is still a hit.
+- **Reused Summary-style closers (relaxes C6).** "Putting it together" and equivalent Summary-pattern closers may repeat across lessons, since Summary is a pattern category, not one fixed sentence. Reusing the identical sentence twice within one lesson still fails.
+- **Chapter-landing preview lines (relaxes E4).** A chapter landing page may open with "In this chapter, we cover X, Y, and Z" even though opening with a context dump instead of the task is otherwise discouraged. Landing pages only, not individual lesson bodies.
+- **Chapter-transition teasers (relaxes E2).** The connecting line at a chapter boundary may use "we're going to" / "it's time to" / "we've got" as the connecting verb ("Now that we've done X, we're going to Y"). Not a license for that framing as a general-purpose transition inside a lesson body.
+
+This is the full list. A project-specific fork of this skill (e.g. a lesson-writing template for a particular curriculum) may point back at this section for structure, but should not duplicate or re-grant permissions already listed here: add new exceptions here instead.
 
 ## The Rules
 
@@ -135,6 +149,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 
 > aforementioned → prior, preceding
 > align with → match, fit
+> arrives (as filler for ships, launches) → comes, ships
 > beacon → symbol
 > bolster → support
 > boasts → claim, show
@@ -181,7 +196,9 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > paramount → top, key
 > pave the way, paving the way → clear the path, enable
 > pipeline (as placeholder for specific tooling) → workflow, process, or name the actual tool
+> pipes (as filler for feeds, sends) → feeds, sends
 > pivotal → key, central
+> plus (as filler transition) → and, also, cut
 > profound → deep, strong
 > realm → area, field
 > remarkable → notable
@@ -277,15 +294,21 @@ After:
 
 #### C6. Repetition and variation
 
-Words to watch: the same significant word three or more times in a six-paragraph span. Swapping in a synonym to dodge repetition ("protagonist" → "main character" → "central figure" → "hero" in the same piece).
+Words to watch: the same significant word three or more times in a six-paragraph span. Swapping in a synonym to dodge repetition ("protagonist" → "main character" → "central figure" → "hero" in the same piece). A distinct sub-case: "the same" (or "just like," "similarly," "as with") reused three or more times as connective tissue to tie new material back to something already established, instead of a real transition.
 
-Why this is wrong: the prose has a hidden problem. Either the writer is repeating a word because the sentence is hard to write, or the writer is cycling synonyms because the model flagged "repetition" and they reacted. The first is a structural fix; the second is the elegant-variation sign.
+Why this is wrong: the prose has a hidden problem. Either the writer is repeating a word because the sentence is hard to write, or the writer is cycling synonyms because the model flagged "repetition" and they reacted. The first is a structural fix; the second is the elegant-variation sign. The "the same" callback is a third variant: instead of a synonym crutch, it's a continuity crutch. The word "same" itself becomes the tic, standing in for a transition the writer didn't build.
 
 Before:
 > The protagonist faces many challenges. The main character must overcome obstacles. The central figure eventually triumphs. The hero returns home.
 
 After:
 > The protagonist faces many challenges but eventually triumphs and returns home.
+
+Before:
+> A WAV file already on disk can drive the same duplex session. ffmpeg plays that role here: the same `-ar 16000 -ac 1 -sample_fmt flt -f f32le` conversion the mic path uses. `audio_format: "f32le"` is the same setting the mic lesson uses, for the same reason.
+
+After:
+> A WAV file already on disk can drive that duplex session too. ffmpeg plays that role here, using the mic path's `-ar 16000 -ac 1 -sample_fmt flt -f f32le` conversion. `audio_format: "f32le"` matches the mic lesson because the ffmpeg subprocess writes bytes the model expects on the write side.
 
 #### C7. Backhanded scope setting
 
