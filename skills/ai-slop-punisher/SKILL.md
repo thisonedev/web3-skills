@@ -256,9 +256,9 @@ After:
 
 #### C3. Rule of three and tricolons
 
-Pattern: three parallel items in a row used for rhythm rather than because there are three real things. A distinct sub-case: a two-thing comparison dressed as a tricolon — "same X, same Y, just a different Z" — where "same" anaphora carries the first two beats and a minimizing "just" carries the third, so the one real difference gets buried under the cadence instead of stated plainly.
+Pattern: three parallel items in a row used for rhythm rather than because there are three real things. A distinct sub-case: a two-thing comparison dressed as a tricolon ("same X, same Y, just a different Z"), where "same" anaphora carries the first two beats and a minimizing "just" carries the third, so the one real difference gets buried under the cadence instead of stated plainly.
 
-Why this is wrong: lists of three appear on every AI paragraph. Two items with "and" is usually enough; a real list has three only when the content has three. Forced tricolons within one paragraph are the same sign at a smaller scale. The "same, same, just" variant compounds this: it borrows C6's "same" callback and E1's minimizing "just" in one sentence, so the sentence sounds tidy while the actual point — what's different — gets flattened into an afterthought.
+Why this is wrong: lists of three appear on every AI paragraph. Two items with "and" is usually enough; a real list has three only when the content has three. Forced tricolons within one paragraph are the same sign at a smaller scale. The "same, same, just" variant compounds this: it borrows C6's "same" callback and E1's minimizing "just" in one sentence, so the sentence sounds tidy while the actual point, what's different, gets flattened into an afterthought.
 
 Before:
 > The new release ships performance improvements, security patches, and bug fixes.
@@ -484,7 +484,7 @@ Asserted obviousness (when the reader will struggle): clearly, simply, just, eas
 
 Empty transitions with no real logical link: importantly, interestingly, notably.
 
-Lazy words: please ("please see the docs" → "see the docs"), plus (as list separator), fine (as approval), whatever (as trailing filler), welcome to (as opener — see exception below).
+Lazy words: please ("please see the docs" → "see the docs"), plus (as list separator), fine (as approval), whatever (as trailing filler), welcome to (as opener, see exception below).
 
 Exception for "welcome to": acceptable once, in the first chapter or first document of a portal or coding academy, as a one-time greeting ("Welcome to the Tether docs"). Not acceptable as a recurring opener, a section header, or a mid-portal greeting. If a website has more than one top-level entry point, only one of them gets the greeting; the rest cut it.
 
@@ -612,6 +612,7 @@ False positives are real. Do not gut legitimate prose because the pattern matche
 - **Real names that match the rule.** "Tapestry" is a Java web framework. Some library descriptions use "robust." These are real names that happen to look like flagged words.
 - **A single hit in otherwise plain prose.** A short sentence or transition by itself is fine. The signs show up in clusters.
 - **The writer's voice in a sample.** If the user provided a sample with em dashes, dry asides, or short sentences, match the sample.
+- **Plain code lead-ins.** "It looks like:", "which looks like so:", "as follows:" introducing a code block, snippet, or list are functional transitions, not signposting: they name what comes next instead of hyping it. Do not flag them under E4 or D5. This is especially common in coding-academy lessons walking through exercise code. Only flag when paired with a banned opener ("here's what," "let's look at") or when the exact same lead-in phrase repeats three or more times in one piece (D5's near-identical-wording clause still applies).
 
 When in doubt, look for clusters of signs. A single rule hit on its own means nothing.
 
