@@ -195,7 +195,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > paradigm shift → major change
 > paramount → top, key
 > pave the way, paving the way → clear the path, enable
-> pipeline (as placeholder for specific tooling) → workflow, process, or name the actual tool
+> pipeline (as vague metaphor for a generic process, not a real CI/CD, data, ML, build, or shell pipeline) → workflow, process, or name the actual tool
 > pipes (as filler for feeds, sends) → feeds, sends
 > pivotal → key, central
 > plus (as filler transition) → and, also, cut
