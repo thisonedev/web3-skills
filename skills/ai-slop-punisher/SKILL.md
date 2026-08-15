@@ -256,15 +256,19 @@ After:
 
 #### C3. Rule of three and tricolons
 
-Pattern: three parallel items in a row used for rhythm rather than because there are three real things.
+Pattern: three parallel items in a row used for rhythm rather than because there are three real things. A distinct sub-case: a two-thing comparison dressed as a tricolon — "same X, same Y, just a different Z" — where "same" anaphora carries the first two beats and a minimizing "just" carries the third, so the one real difference gets buried under the cadence instead of stated plainly.
 
-Why this is wrong: lists of three appear on every AI paragraph. Two items with "and" is usually enough; a real list has three only when the content has three. Forced tricolons within one paragraph are the same sign at a smaller scale.
+Why this is wrong: lists of three appear on every AI paragraph. Two items with "and" is usually enough; a real list has three only when the content has three. Forced tricolons within one paragraph are the same sign at a smaller scale. The "same, same, just" variant compounds this: it borrows C6's "same" callback and E1's minimizing "just" in one sentence, so the sentence sounds tidy while the actual point — what's different — gets flattened into an afterthought.
 
 Before:
 > The new release ships performance improvements, security patches, and bug fixes.
+>
+> CTC is the English-only TDT variant: same call signature, same options, just a different `modelId`.
 
 After:
 > The new release ships 12 performance fixes. (Cut to one item with specifics, or two if both are real.)
+>
+> CTC is the English-only TDT variant, using the same call signature and options with a different `modelId`.
 
 #### C4. Passive voice and subjectless fragments
 
@@ -282,15 +286,21 @@ Ordinary passive is acceptable when the actor is unknown or irrelevant.
 
 #### C5. Rhythmic signs
 
-Words to watch: a clause wedged into the middle of a subject-verb pair, set off by commas or parens. Three-plus consecutive sentences under eight words. "The first wall is... The second wall is..." numbered list in paragraph clothes. "Short sentence. Then another. Then another." parataxis. Every paragraph the same length, same template. A sentence that opens with a backticked reference and never names a verb. A single colon-introduced sentence running a conditional, an action, and a purpose.
+Words to watch: a clause wedged into the middle of a subject-verb pair, set off by commas or parens. Three-plus consecutive sentences under eight words. "The first wall is... The second wall is..." numbered list in paragraph clothes. "Short sentence. Then another. Then another." parataxis. Every paragraph the same length, same template. A sentence that opens with a backticked reference and never names a verb. A single colon-introduced sentence running a conditional, an action, and a purpose. Parallel doubling: two consecutive sentences with different subjects sharing the same verb and sentence shape ("[A] shows X. [B] shows Y.") to imply a comparison instead of a comparison word.
 
-Why this is wrong: the prose has a structural rhythm or template that the content does not need. The reader feels the cadence before the meaning. Each pattern is a different way the model imposes a structure on the prose.
+Why this is wrong: the prose has a structural rhythm or template that the content does not need. The reader feels the cadence before the meaning. Each pattern is a different way the model imposes a structure on the prose. Parallel doubling in particular borrows the shape of a comparison without the word that would make it one, so the reader has to infer the relationship the sentence never states.
 
 Before:
 > The migration succeeded. The team delivered. The release shipped. The cache, which we added in v1.4, sits between the API and the database. To deploy, use the new flag instead of the old one.
 
 After:
 > The migration succeeded on Tuesday, the team delivered without rollback, and the v1.4 cache now sits between the API and the database. Deploy with `--use-v2`.
+
+Before:
+> The completion chapters show what the model returned. The logging stream shows what was happening under the hood: every server-side SDK event and every per-model log line, in real time, streamed over the same RPC the rest of the SDK uses.
+
+After:
+> The completion chapters show what the model returned. Underneath it, the logging stream carries every server-side SDK event and per-model log line in real time, over the same RPC the rest of the SDK uses.
 
 #### C6. Repetition and variation
 
@@ -333,6 +343,12 @@ Before:
 
 After:
 > The turbo default is eight inference steps.
+
+Before:
+> There's no LLM encoder and no VAE to download alongside it. That single-file layout is the trade-off.
+
+After:
+> There's no LLM encoder and no VAE to download alongside it. The trade-off is a single-file layout.
 
 Exception: topic-first copulas are already correct and should not be flagged ("ACE-Step is a four-stage bundle").
 
