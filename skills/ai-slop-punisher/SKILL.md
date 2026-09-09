@@ -131,15 +131,15 @@ If a real source exists, name it. The rewrite does not invent one to make a sent
 
 #### A5. Placeholder abstractions
 
-Words to watch: shape (as placeholder, not literal geometry or real identifiers like `array.shape`), gap, gaps, blast radius, attack surface, as mentioned above, click here, the trade (as casual shorthand for trade-off, trading-floor slang: "what's the trade here?").
+Words to watch: shape (as placeholder, not literal geometry or real identifiers like `array.shape`), gap, gaps, blast radius, attack surface, as mentioned above, click here, the trade (as casual shorthand for trade-off, trading-floor slang: "what's the trade here?"), knobs (as placeholder for parameters, settings, or configuration options; not a literal hardware dial or UI control a person turns).
 
-Why this is wrong: the word sounds like a stand-in for a specific effect. The next reader has to translate the placeholder back into a real word. "Shape" is the model reaching for a vague abstract noun. "Gap" hides a concrete failure. "Blast radius" is a metaphor where a literal number would do. "Click here" is a CTA with no destination. "The trade" borrows financial jargon to gesture at a cost/benefit pair without naming either side.
+Why this is wrong: the word sounds like a stand-in for a specific effect. The next reader has to translate the placeholder back into a real word. "Shape" is the model reaching for a vague abstract noun. "Gap" hides a concrete failure. "Blast radius" is a metaphor where a literal number would do. "Click here" is a CTA with no destination. "The trade" borrows financial jargon to gesture at a cost/benefit pair without naming either side. "Knobs" borrows a physical-dial image to gesture at a set of parameters without naming any of them.
 
 Before:
-> There's a documentation gap. Use the blast radius check to find impacted callers. As mentioned above, click here for details.
+> There's a documentation gap. Use the blast radius check to find impacted callers. As mentioned above, click here for details. There are a few knobs you can tune to control the batch size.
 
 After:
-> Users can't find the auth docs. The migration tool's `--impacted` flag lists every caller that imports the changed module. See the addons overview.
+> Users can't find the auth docs. The migration tool's `--impacted` flag lists every caller that imports the changed module. See the addons overview. The `batchSize` and `maxConcurrency` parameters control batching.
 
 ### B. AI Vocabulary
 
