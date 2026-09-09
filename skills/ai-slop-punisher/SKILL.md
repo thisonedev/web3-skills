@@ -75,7 +75,7 @@ This is the full list. A project-specific fork of this skill (e.g. a lesson-writ
 
 ## The Rules
 
-Thirty rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Thirty-two rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -376,6 +376,30 @@ Before:
 After:
 > The conversion makes the bytes compatible with Whisper.
 
+#### C11. "Before you" timing frames
+
+Pattern: a technical characteristic (synchronous, blocking, batched, non-streaming) routed through the reader's delayed perception instead of named directly — "[X] finishes [gerund] before you see/notice/get [outcome]," "you won't see Y until X finishes," "by the time you Z, X has already happened." Often paired with a periphrastic "finishes X-ing" standing in for the plain verb.
+
+Why this is wrong: the sentence narrates when the reader notices something instead of stating the mechanism. It reads like tutorial voiceover, not a technical claim, and "finishes X-ing" is a wordier stand-in for the plain verb it replaces.
+
+Before:
+> The batch finishes translating before you see any output.
+
+After:
+> Batch translation is not streamed: output arrives only once the whole job finishes.
+
+#### C12. Negative-fronted construction
+
+Pattern: a sentence opens with "Nothing," "No one," "Nobody," or "None" as the grammatical subject, withholding the real condition or actor until a trailing "until" clause — "Nothing prints until every entry is translated," "No output appears until the job completes." Frequently stacks with a passive trailing clause ("...until X is done"), which hides the actor and compounds the fault (see C4).
+
+Why this is wrong: the sentence states an absence first and makes the reader wait for the actual information, instead of naming the condition directly. It manufactures suspense a technical sentence does not need, and the fronted negative is often paired with the very passive construction C4 already flags — two faults stacked in one sentence.
+
+Before:
+> Nothing prints until every entry is translated.
+
+After:
+> The batch translates every entry, then prints the output.
+
 ### D. Style and Formatting
 
 #### D1. Em dashes and en dashes
@@ -550,7 +574,7 @@ The technical-docs gate fires only when the draft has a fenced code block, three
 
 #### F2. Vague placeholder verbs
 
-Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval.
+Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays — casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing.
 
 Why this is wrong: the verb sounds like a stand-in for a specific action. The next reader has to translate the placeholder back into a real verb.
 
