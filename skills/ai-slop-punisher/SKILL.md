@@ -131,9 +131,9 @@ If a real source exists, name it. The rewrite does not invent one to make a sent
 
 #### A5. Placeholder abstractions
 
-Words to watch: shape (as placeholder, not literal geometry or real identifiers like `array.shape`), gap, gaps, blast radius, attack surface, as mentioned above, click here.
+Words to watch: shape (as placeholder, not literal geometry or real identifiers like `array.shape`), gap, gaps, blast radius, attack surface, as mentioned above, click here, the trade (as casual shorthand for trade-off, trading-floor slang: "what's the trade here?").
 
-Why this is wrong: the word sounds like a stand-in for a specific effect. The next reader has to translate the placeholder back into a real word. "Shape" is the model reaching for a vague abstract noun. "Gap" hides a concrete failure. "Blast radius" is a metaphor where a literal number would do. "Click here" is a CTA with no destination.
+Why this is wrong: the word sounds like a stand-in for a specific effect. The next reader has to translate the placeholder back into a real word. "Shape" is the model reaching for a vague abstract noun. "Gap" hides a concrete failure. "Blast radius" is a metaphor where a literal number would do. "Click here" is a CTA with no destination. "The trade" borrows financial jargon to gesture at a cost/benefit pair without naming either side.
 
 Before:
 > There's a documentation gap. Use the blast radius check to find impacted callers. As mentioned above, click here for details.
@@ -215,6 +215,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > synergy → fit, collaboration
 > tapestry → range, web
 > testament → proof, evidence
+> the tell is, the tell isn't → the sign is
 > this changes everything → cut
 > this is huge → cut
 > transformative → major, new
@@ -378,7 +379,7 @@ After:
 
 #### C11. "Before you" timing frames
 
-Pattern: a technical characteristic (synchronous, blocking, batched, non-streaming) routed through the reader's delayed perception instead of named directly — "[X] finishes [gerund] before you see/notice/get [outcome]," "you won't see Y until X finishes," "by the time you Z, X has already happened." Often paired with a periphrastic "finishes X-ing" standing in for the plain verb.
+Pattern: a technical characteristic (synchronous, blocking, batched, non-streaming) routed through the reader's delayed perception instead of named directly: "[X] finishes [gerund] before you see/notice/get [outcome]," "you won't see Y until X finishes," "by the time you Z, X has already happened." Often paired with a periphrastic "finishes X-ing" standing in for the plain verb.
 
 Why this is wrong: the sentence narrates when the reader notices something instead of stating the mechanism. It reads like tutorial voiceover, not a technical claim, and "finishes X-ing" is a wordier stand-in for the plain verb it replaces.
 
@@ -390,9 +391,9 @@ After:
 
 #### C12. Negative-fronted construction
 
-Pattern: a sentence opens with "Nothing," "No one," "Nobody," or "None" as the grammatical subject, withholding the real condition or actor until a trailing "until" clause — "Nothing prints until every entry is translated," "No output appears until the job completes." Frequently stacks with a passive trailing clause ("...until X is done"), which hides the actor and compounds the fault (see C4).
+Pattern: a sentence opens with "Nothing," "No one," "Nobody," or "None" as the grammatical subject, withholding the real condition or actor until a trailing "until" clause: "Nothing prints until every entry is translated," "No output appears until the job completes." Frequently stacks with a passive trailing clause ("...until X is done"), which hides the actor and compounds the fault (see C4).
 
-Why this is wrong: the sentence states an absence first and makes the reader wait for the actual information, instead of naming the condition directly. It manufactures suspense a technical sentence does not need, and the fronted negative is often paired with the very passive construction C4 already flags — two faults stacked in one sentence.
+Why this is wrong: the sentence states an absence first and makes the reader wait for the actual information, instead of naming the condition directly. It manufactures suspense a technical sentence does not need. The fronted negative is often paired with the very passive construction C4 already flags, two faults stacked in one sentence.
 
 Before:
 > Nothing prints until every entry is translated.
@@ -574,7 +575,7 @@ The technical-docs gate fires only when the draft has a fenced code block, three
 
 #### F2. Vague placeholder verbs
 
-Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays — casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing.
+Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays: casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing.
 
 Why this is wrong: the verb sounds like a stand-in for a specific action. The next reader has to translate the placeholder back into a real verb.
 
