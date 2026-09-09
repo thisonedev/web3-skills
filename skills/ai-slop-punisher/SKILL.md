@@ -245,15 +245,19 @@ After:
 
 #### C2. Negative parallelisms
 
-Patterns to watch: a first clause that sets up a foil, and a second clause that delivers the real point. Common shapes include "not just X, but Y" and "X rather than Y" and "It's not just about X, it's Y." The tailing-negation fragment is a sibling: a "no guessing" or "no wasted motion" stuck on at the end of a sentence.
+Patterns to watch: a first clause that sets up a foil, and a second clause that delivers the real point. Common shapes include "not just X, but Y" and "X rather than Y" and "It's not just about X, it's Y." The tailing-negation fragment is a sibling: a "no guessing" or "no wasted motion" stuck on at the end of a sentence. A further variant restates a restrictive "just" or "only" with a redundant negative tail: "produces just the translated string, nothing else."
 
-Why this is wrong: the construction sets up a fake contrast to make the second clause stick. A real point does not need a foil.
+Why this is wrong: the construction sets up a fake contrast to make the second clause stick. A real point does not need a foil. In the redundant-tail variant, "nothing else" says the same thing "just" already said, just louder.
 
 Before:
 > It's not just a linter, it's a complete code quality platform. The options come from the selected item, no guessing.
+>
+> The stream produces just the translated string, nothing else.
 
 After:
 > The tool catches both syntax errors and unused imports. The CLI prints the full path of every match.
+>
+> The stream produces only the translated string.
 
 #### C3. Rule of three and tricolons
 
@@ -575,7 +579,7 @@ The technical-docs gate fires only when the draft has a fenced code block, three
 
 #### F2. Vague placeholder verbs
 
-Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays: casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing.
+Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays: casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing. yields (use produces, gives, results in) when nothing in the sentence actually generates or iterates. Exempt when the subject is a real generator, iterator, or stream that literally yields values, as in "the async generator yields each chunk."
 
 Why this is wrong: the verb sounds like a stand-in for a specific action. The next reader has to translate the placeholder back into a real verb.
 
