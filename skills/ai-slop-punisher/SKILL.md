@@ -81,15 +81,15 @@ Thirty-two rules in seven groups. The critical rule is fabrication (group G). Al
 
 #### A1. Significance puffery
 
-Words to watch: stands as, represents, is a testament, is a reminder, a vital role, a significant moment, underscores, highlights its importance, reflects broader, symbolizing its ongoing, contributing to the, setting the stage for, marks a shift, key turning point, evolving landscape, focal point, indelible mark, deeply rooted, why this matters, what matters here, the future looks bright, here's where it gets interesting, the part everyone misses, what most people get wrong, here's what nobody tells you, most people think X, worth reading, worth exploring.
+Words to watch: stands as, represents, is a testament, is a reminder, a vital role, a significant moment, underscores, highlights its importance, reflects broader, symbolizing its ongoing, contributing to the, setting the stage for, marks a shift, key turning point, evolving landscape, focal point, indelible mark, deeply rooted, why this matters, what matters here, the future looks bright, here's where it gets interesting, the part everyone misses, what most people get wrong, here's what nobody tells you, most people think X, worth reading, worth exploring, carries (as filler for "has weight/significance": carries weight, carries implications, carries risk, carries irony).
 
-Why this is wrong: the sentence adds a sentence about what an ordinary detail represents, contributes to, or amounts to. The detail does not need that sentence. The setup previews a payoff that the prose does not deliver. The future-zoom ending adds nothing the next paragraph does not say. The "what most people get wrong" framing positions the writer as the lone authority without earning it.
+Why this is wrong: the sentence adds a sentence about what an ordinary detail represents, contributes to, or amounts to. The detail does not need that sentence. The setup previews a payoff that the prose does not deliver. The future-zoom ending adds nothing the next paragraph does not say. The "what most people get wrong" framing positions the writer as the lone authority without earning it. "Carries" gestures at unspecified weight or risk instead of naming it.
 
 Before:
-> We shipped v2.0, marking a pivotal moment in our journey toward API maturity. Here's where it gets interesting: the future of authentication looks bright. Most people think OAuth is hard.
+> We shipped v2.0, marking a pivotal moment in our journey toward API maturity. Here's where it gets interesting: the future of authentication looks bright. Most people think OAuth is hard. This change carries significant implications for backward compatibility.
 
 After:
-> We shipped v2.0. Authentication now uses OAuth 2.1 with PKCE.
+> We shipped v2.0. Authentication now uses OAuth 2.1 with PKCE. Existing tokens issued before v2.0 stop validating; clients must reauthenticate.
 
 #### A2. Promotional and marketing language (marketing smell)
 
@@ -579,15 +579,15 @@ The technical-docs gate fires only when the draft has a fenced code block, three
 
 #### F2. Vague placeholder verbs
 
-Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays: casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing. yields (use produces, gives, results in) when nothing in the sentence actually generates or iterates. Exempt when the subject is a real generator, iterator, or stream that literally yields values, as in "the async generator yields each chunk." flip (a flag/switch) (use set, pass, enable, turn on) when describing a code-level parameter or config option. Exempt for an actual UI toggle, checkbox, or feature-flag switch a person clicks.
+Words to watch: ship (use publish, release, roll out). drift (use go stale, fall out of sync). land (use ends up, arrives, sits). lock in (use finalize, confirm, decide on). clean or cleanly as a placeholder. stand up. plus as a list separator. fine as approval. print, prints as a placeholder for outputs, appears, displays: casual trading-floor slang ("I printed $1284 on this trade") bleeding into technical writing. yields (use produces, gives, results in) when nothing in the sentence actually generates or iterates. Exempt when the subject is a real generator, iterator, or stream that literally yields values, as in "the async generator yields each chunk." flip (a flag/switch) (use set, pass, enable, turn on) when describing a code-level parameter or config option. Exempt for an actual UI toggle, checkbox, or feature-flag switch a person clicks. carries into, carries over into (use extends into, continues into, applies to, repeats in) when describing how a pattern, structure, or behavior spans two contexts without saying what actually connects them.
 
-Why this is wrong: the verb sounds like a stand-in for a specific action. The next reader has to translate the placeholder back into a real verb.
+Why this is wrong: the verb sounds like a stand-in for a specific action. The next reader has to translate the placeholder back into a real verb. "Carries into" is the vaguest of the set: it asserts a connection between two things without saying whether it's inheritance, repetition, causation, or something else, so the reader can't tell what actually happened.
 
 Before:
-> The new feature ships next week. The release lands on a Tuesday.
+> The new feature ships next week. The release lands on a Tuesday. The naming structure from the config file carries into the CLI flags.
 
 After:
-> The new feature releases next Tuesday.
+> The new feature releases next Tuesday. The CLI flags reuse the config file's naming: `max_retries` becomes `--max-retries`.
 
 ### G. Trust
 
