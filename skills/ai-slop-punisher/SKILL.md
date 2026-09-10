@@ -150,6 +150,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > aforementioned → prior, preceding
 > align with → match, fit
 > arrives (as filler for ships, launches) → comes, ships
+> await (generic verb, outside async code) → wait for
 > beacon → symbol
 > bolster → support
 > boasts → claim, show
