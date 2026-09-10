@@ -154,6 +154,7 @@ These words appear far more often in post-2023 text and tend to cluster. They ar
 > beacon → symbol
 > bolster → support
 > boasts → claim, show
+> comes back (generic filler for returns, outside a literal physical return) → returns, resolves to, responds with
 > commence → start
 > comprehensive → full, complete
 > cutting-edge → modern, leading
