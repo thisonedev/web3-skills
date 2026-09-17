@@ -75,7 +75,7 @@ This is the full list. A project-specific fork of this skill (e.g. a lesson-writ
 
 ## The Rules
 
-Thirty-two rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Thirty-three rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -406,6 +406,18 @@ Before:
 
 After:
 > The batch translates every entry, then prints the output.
+
+#### C13. Verbless fragment stacking
+
+Pattern: a relative or main clause followed by one or more trailing noun-phrase fragments, set off by commas, that have no subject or verb at all ("...a `Promise<Uint8Array[]>`, one PNG per array entry, a single image by default unless we ask for more"). Distinct from C4, which drops the subject but keeps an implied verb, and from C2, which sets up a foil: here the fragments are bare appositives with nothing predicating them.
+
+Why this is wrong: each fragment adds a distinct fact, but stacking them onto one sentence through bare commas asks the reader to supply the missing verb for each one. Splitting each fact into its own sentence, or giving each fragment its own verb, reads clearer. Exempt for flat reference documentation, where terse fact-stacking is expected (see What NOT to Flag, "Reference doc flatness").
+
+Before:
+> `diffusion()` returns a `DiffusionResult` whose `outputs` field is a `Promise<Uint8Array[]>`, one PNG per array entry, a single image by default unless we ask for more.
+
+After:
+> `diffusion()` returns a `DiffusionResult`. Its `outputs` field is a `Promise<Uint8Array[]>`, one PNG per entry, a single image by default unless you ask for more.
 
 ### D. Style and Formatting
 
