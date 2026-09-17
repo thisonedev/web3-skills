@@ -517,11 +517,11 @@ Asserted obviousness (when the reader will struggle): clearly, simply, just, eas
 
 Empty transitions with no real logical link: importantly, interestingly, notably.
 
-Lazy words: please ("please see the docs" → "see the docs"), plus (as list separator), fine (as approval), whatever (as trailing filler), welcome to (as opener, see exception below).
+Lazy words: please ("please see the docs" → "see the docs"), plus (as list separator), fine (as approval), whatever (as trailing filler), welcome to (as opener, see exception below), here (mid-sentence, as vague filler for "in this lesson" or "in this case," not a literal spatial reference): cut, or name what it refers to ("in this lesson," "in this exercise"). Fine once or twice in a piece; reused as a tic across many sentences is the same failure C6 flags for repeated content words, applied to a filler word instead.
 
 Exception for "welcome to": acceptable once, in the first chapter or first document of a portal or coding academy, as a one-time greeting ("Welcome to the Tether docs"). Not acceptable as a recurring opener, a section header, or a mid-portal greeting. If a website has more than one top-level entry point, only one of them gets the greeting; the rest cut it.
 
-Why this is wrong: the sentence has filler doing the work of a real verb. The intensifier adds nothing the next word was not going to say anyway. The lazy word is a stand-in for a specific verb. The "asserted obviousness" qualifier is the model reassuring itself that the reader will follow.
+Why this is wrong: the sentence has filler doing the work of a real verb. The intensifier adds nothing the next word was not going to say anyway. The lazy word is a stand-in for a specific verb. The "asserted obviousness" qualifier is the model reassuring itself that the reader will follow. A stray "here" once is harmless, but when it recurs sentence after sentence as connective padding, it becomes the same verbal tic C6 flags for repeated content words.
 
 #### E2. Throat-clearing openers
 
