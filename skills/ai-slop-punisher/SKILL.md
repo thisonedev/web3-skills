@@ -75,7 +75,7 @@ This is the full list. A project-specific fork of this skill (e.g. a lesson-writ
 
 ## The Rules
 
-Thirty-three rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Thirty-four rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -418,6 +418,18 @@ Before:
 
 After:
 > `diffusion()` returns a `DiffusionResult`. Its `outputs` field is a `Promise<Uint8Array[]>`, one PNG per entry, a single image by default unless you ask for more.
+
+#### C14. Nominalized action via copula
+
+Pattern: "The only addition/change/difference is [noun phrase naming a piece of code or an action]" instead of stating the action with a plain verb ("We also write X," "This also prints X"). Applies most clearly to basic operations any junior developer would immediately recognize (printing a value, writing a newline, incrementing a counter): trivial enough that packaging the action as a noun instead of a verb adds nothing but formality.
+
+Why this is wrong: it turns a concrete, simple action into a static description that reads like a diff summary instead of something a person would say out loud. A human explaining a small code change tends to lead with the verb. For a genuinely complex or nuanced change, naming the change as a noun before detailing it can be legitimate; the tell shows up specifically when the underlying action is basic enough that the plain verb was already the complete, natural description.
+
+Before:
+> The only addition is a trailing `process.stdout.write("\n")` once the stream ends.
+
+After:
+> We also print a newline once the stream ends.
 
 ### D. Style and Formatting
 
