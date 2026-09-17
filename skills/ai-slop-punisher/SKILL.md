@@ -611,15 +611,15 @@ After:
 
 #### G2. Anthropomorphization
 
-Patterns: the model sees, the model decides, the model thinks, the model wants, the model knows, the model chooses. "As an AI," "as a language model," "I am a large language model." Hallucinate, hallucinates, hallucinated. Beyond the model: hands, hands us, hands back, gives us, gives you (as a human handing gesture standing in for a non-human software component, such as an SDK, a function, or a callback, passing or returning a value) → use passes, invokes with, calls back with, returns instead.
+Patterns: the model sees, the model decides, the model thinks, the model wants, the model knows, the model chooses. "As an AI," "as a language model," "I am a large language model." Hallucinate, hallucinates, hallucinated. Beyond the model: hands, hands us, hands back, gives us, gives you (as a human handing gesture standing in for a non-human software component, such as an SDK, a function, or a callback, passing or returning a value) → use passes, invokes with, calls back with, returns instead. where the model is, how far the model has to go, the model is at step N (a spatial or journey metaphor for a progress counter) → name the counter directly (current step, steps remaining, step N of M).
 
-Why this is wrong: the model is described as a person with intentions. The next sampled token is not a decision. The prompt including the image is not the model seeing it. State the concrete event. Drop the imagined inner life. The same failure extends past "the model": an SDK or callback described as "handing" data to a person borrows a social gesture for a mechanical invocation. Name the mechanism instead.
+Why this is wrong: the model is described as a person with intentions. The next sampled token is not a decision. The prompt including the image is not the model seeing it. State the concrete event. Drop the imagined inner life. The same failure extends past "the model": an SDK or callback described as "handing" data to a person borrows a social gesture for a mechanical invocation. Name the mechanism instead. "Where the model is" and "how far it has to go" borrow a journey for a plain progress counter: the model has no location and no road ahead of it, only a step count.
 
 Before:
-> The model sees the image and decides whether to call the tool. The LLM hallucinates the cache key when the key is missing. The SDK invokes it repeatedly while the model downloads, each time handing us `{ percentage, downloaded, total }`.
+> The model sees the image and decides whether to call the tool. The LLM hallucinates the cache key when the key is missing. The SDK invokes it repeatedly while the model downloads, each time handing us `{ percentage, downloaded, total }`. `step` and `totalSteps` tell you where the model is and how far it has to go.
 
 After:
-> The prompt includes the image. The next sampled token may be a tool call. When the key is missing, the SDK returns the cache miss and the call falls back to the source. The SDK invokes it repeatedly while the model downloads, each time passing `{ percentage, downloaded, total }`.
+> The prompt includes the image. The next sampled token may be a tool call. When the key is missing, the SDK returns the cache miss and the call falls back to the source. The SDK invokes it repeatedly while the model downloads, each time passing `{ percentage, downloaded, total }`. `step` and `totalSteps` tell you the current step and how many steps remain.
 
 #### G3. Vague claims
 
