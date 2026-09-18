@@ -75,7 +75,7 @@ This is the full list. A project-specific fork of this skill (e.g. a lesson-writ
 
 ## The Rules
 
-Thirty-six rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Thirty-seven rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -140,6 +140,23 @@ Before:
 
 After:
 > Users can't find the auth docs. The migration tool's `--impacted` flag lists every caller that imports the changed module. See the addons overview. The `batchSize` and `maxConcurrency` parameters control batching. Read the aggregate from `result.final`. It's time to feed AudioGen an existing track instead of generating from the caption alone.
+
+#### A6. Restating assumed-known mechanics
+
+Pattern: a sentence explains how a standard language or library primitive already works instead of naming what's specific to the call at hand ("`transcribeStream({ modelId })` returns a `Promise<session>`, so you `await` it before the `for await`," aimed at readers who already know async/await and async iterables).
+
+Why this is wrong: the model defaults to teaching basics it wasn't asked to teach, padding the doc with the reader's prior knowledge instead of the one fact that's actually new: what this specific call returns or does differently. It reads as condescending to the stated audience. Exempt for content explicitly aimed at beginners to the language or concept (a first lesson introducing async/await itself, an intro chapter); the calibration is about the target audience, not the mechanic. The fix itself has a trap: reaching for the same verb ("resolves to") every time this pattern gets cut across a doc just relocates the repetition into a new C6 hit. Rotate across plain options for stating what a call produces (resolves to, produces, returns, is), or state the type directly with no verb at all ("a `session`, iterable directly:").
+
+Before:
+> `transcribeStream({ modelId })` returns a `Promise<session>`, so you `await` it before the `for await`.
+
+After:
+> `transcribeStream({ modelId })` resolves to a `session`:
+> ```js
+> const session = await transcribeStream({ modelId });
+> for await (const chunk of session) { ... }
+> ```
+> (The prose states only what's new, that the call resolves to a `session`. The code shows the await/for-await mechanic without narrating it.)
 
 ### B. AI Vocabulary
 
