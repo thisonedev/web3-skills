@@ -75,7 +75,7 @@ This is the full list. A project-specific fork of this skill (e.g. a lesson-writ
 
 ## The Rules
 
-Thirty-four rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
+Thirty-six rules in seven groups. The critical rule is fabrication (group G). All other rules carry the same weight (-4 per hit).
 
 ### A. Content and Claims
 
@@ -430,6 +430,30 @@ Before:
 
 After:
 > We also print a newline once the stream ends.
+
+#### C15. Ambiguous pronoun reference
+
+Pattern: a pronoun ("it," "its," "this," "that," "they") follows two or more singular nouns that could each take it, and proximity (the nearest noun) and topicality (the sentence's subject) point to different antecedents with nothing in the sentence to settle which one is meant: "The stream produces the translated string, and `texts[index]` holds its source" — "its" could be the stream's source or the string's source.
+
+Why this is wrong: the reader has to guess which noun the pronoun points back to instead of reading straight through. Name the referent instead of leaning on the pronoun.
+
+Before:
+> The stream produces the translated string, and `texts[index]` holds its source.
+
+After:
+> The stream produces the translated string; `texts[index]` holds the source text it was translated from.
+
+#### C16. Prepositions used as bare labels
+
+Pattern: a relational word that is a preposition in ordinary English (`from`, `to`, `by`, `with`, `over`, `under`) stands alone as a field or parameter name, with no head noun after it: "Each entry has its own `from` and `to`."
+
+Why this is wrong: the reader's parser expects an object to complete the preposition and stalls when the sentence ends without one, even when the word is backticked as a code token.
+
+Before:
+> Each entry has its own `from` and `to`.
+
+After:
+> Each entry has its own `from` and `to` fields.
 
 ### D. Style and Formatting
 
