@@ -296,15 +296,19 @@ After:
 
 #### C4. Passive voice and subjectless fragments
 
-Patterns: hiding the actor ("the file gets deleted" when the user deletes it). Dropping the subject entirely ("no configuration file needed," "the results are preserved automatically").
+Patterns: hiding the actor ("the file gets deleted" when the user deletes it). Dropping the subject entirely ("no configuration file needed," "the results are preserved automatically"). Turning a plain verb into a noun and passing it through a formal passive verb ("a cancel is issued," "a retry is triggered," "a request is made") instead of naming who acts.
 
-Why this is wrong: the sentence has no one doing the action. Active voice is clearer and more direct.
+Why this is wrong: the sentence has no one doing the action. Active voice is clearer and more direct. The nominalized version adds a second cost: a modifier like "too late" hangs on the issuing, so the reader has to work out what the lateness is measured against (here, the block already having finished).
 
 Before:
 > No configuration file needed. The results are preserved automatically.
+>
+> If a cancel is issued after the block finishes, the output is discarded.
 
 After:
 > You do not need a configuration file. The system preserves the results automatically.
+>
+> If you cancel after the block finishes, the SDK discards the output.
 
 Ordinary passive is acceptable when the actor is unknown or irrelevant.
 
