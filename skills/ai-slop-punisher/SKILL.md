@@ -476,6 +476,18 @@ Before:
 After:
 > Each entry has its own `from` and `to` fields.
 
+#### C17. Pseudo-conditional imperatives
+
+Pattern: an imperative joined by ", and" to a result clause, standing in for an if-then: "pass X, and the result reports Y," "add the flag, and the build skips tests." Often paired with an "instead" that contrasts against a default the sentence never names, so the reader has to reach back to an earlier sentence (or guess) to learn what is being replaced.
+
+Why this is wrong: the "do X, and Y happens" cadence is the infomercial beat ("just add water, and you've got soup"). It stages a plain conditional as a small reveal. A dangling "instead" makes it worse: the contrast it promises sits outside the sentence. State the condition with "if" or "when," and name the default the result replaces. Exempt when the sentence describes a literal pass-through or a two-step sequence where the "and" carries real temporal order ("run the migration, and then restart the server").
+
+Before:
+> For a vocal track in a known language, pass a hint such as `vocalLanguage: "es"` to `audioUnderstand()`, and the result reports that value instead.
+
+After:
+> If you know the vocal track's language, pass it as `vocalLanguage` (for example, `"es"`). `audioUnderstand()` then reports that language instead of the detected one.
+
 ### D. Style and Formatting
 
 #### D1. Em dashes and en dashes
