@@ -711,6 +711,8 @@ After:
 
 Any command, endpoint, config key, error message, version number, statistic, function name, or behavior that cannot be traced to the source material or to a named user source. Hypotheticals must be marked. Weasel attribution is not the same as fabrication; nothing is invented, only borrowed. Fabrication is a defect even when it sounds more authoritative than the vague original.
 
+This includes guarantees or mechanics the source only implies, such as "identical output on rerun" (determinism the source never states) or "each step edits the previous result" (a pipeline the source never describes). These pass a skim because every named API is real; only the claim about how it behaves is invented. Trace each behavioral claim to a sentence in the source, not to what the API name suggests.
+
 Why this is wrong: this is a defect even when it sounds more authoritative than the vague original. It is an accuracy failure. Style is the wrong frame.
 
 This is the only rule in the ruleset with a score cap. If it fires, the score is capped at 30, full stop.
